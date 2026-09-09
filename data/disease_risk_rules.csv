@@ -1,0 +1,10 @@
+rule_id,crop_id,disease_id,temperature_condition,humidity_condition,rainfall_condition,risk_level,verification_status,source,source_url
+rul_001,crop_grapes,dis_gp_01,20 <= T <= 26,H >= 80,Rain > 5mm or LeafWetness > 4h,High,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+rul_002,crop_grapes,dis_gp_01,18 <= T <= 30,65 <= H < 80,Rain <= 5mm,Medium,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+rul_003,crop_grapes,dis_gp_01,T > 32 or T < 15,H < 65,Rain == 0,Low,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+rul_004,crop_grapes,dis_gp_02,22 <= T <= 30,40 <= H <= 75,Rain == 0 and DenseCanopy,High,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+rul_005,crop_onion,dis_on_01,22 <= T <= 28,H >= 80,Rain > 2mm or HeavyDew,High,VERIFIED,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in
+rul_006,crop_onion,dis_on_01,18 <= T <= 32,60 <= H < 80,Rain <= 2mm,Medium,VERIFIED,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in
+rul_007,crop_sugarcane,dis_sc_01,28 <= T <= 33,H >= 85,Waterlogging > 48h,High,VERIFIED,ICAR-SBI Coimbatore,https://sugarcane.icar.gov.in
+rul_008,crop_wheat,dis_wh_01,10 <= T <= 18,H >= 85,Rain > 2mm or HeavyMorningDew,High,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in
+rul_009,crop_wheat,dis_wh_01,15 <= T <= 24,65 <= H < 85,Rain <= 2mm,Medium,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in

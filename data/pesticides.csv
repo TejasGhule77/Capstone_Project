@@ -1,0 +1,13 @@
+pesticide_id,active_ingredient,product_name,crop,target_problem,formulation,label_claim,phi,mrl,source,source_url,verification_status,last_verified
+pest_gp_001,Dimethomorph 50% WP,Acrobat 50 WP,Grapes,Downy Mildew,WP (Wettable Powder),1.0 g/L foliar spray,40 days,0.05 ppm,ICAR-NRC Grapes & CIB&RC,https://nrcgrapes.icar.gov.in,VERIFIED,2026-08-20
+pest_gp_002,Potassium Phosphonate,K-Phite / Phytosav,Grapes,Downy Mildew,SL (Soluble Liquid),3.0 g/L foliar spray,14 days,0.01 ppm,ICAR-NRC Grapes Annexure-5,https://nrcgrapes.icar.gov.in,VERIFIED,2026-08-20
+pest_gp_003,Metalaxyl-M 4% + Mancozeb 64% WP,Ridomil Gold,Grapes,Downy Mildew,WP (Wettable Powder),2.5 g/L foliar spray,60 days,0.05 ppm,CIB&RC Major Uses,https://ppqs.gov.in,VERIFIED,2026-08-20
+pest_gp_004,Fluopyram 200 + Tebuconazole 200 SC,Luna Experience,Grapes,Powdery Mildew & Anthracnose,SC (Suspension Concentrate),0.6 ml/L,45 days,0.05 ppm,ICAR-NRC Grapes & CIB&RC,https://nrcgrapes.icar.gov.in,VERIFIED,2026-08-20
+pest_on_001,Mancozeb 75% WP,Dithane M-45,Onion,Purple Blotch & Stemphylium Blight,WP (Wettable Powder),2.5 g/L + Sticker 0.5ml/L,7 days,0.10 ppm,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in,VERIFIED,2026-08-15
+pest_on_002,Tebuconazole 25.9% EC,Folicur 25.9 EC,Onion,Purple Blotch & Twister,EC (Emulsifiable Concentrate),1.0 ml/L foliar spray,15 days,0.05 ppm,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in,VERIFIED,2026-08-15
+pest_on_003,Trichoderma harzianum 1% WP,Niprot / Bio-Tricho,Onion,Basal Rot & Seedling Damping Off,WP (Bio-Formulation),5.0 g/L foliar / soil drench,0 days,Exempt,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in,VERIFIED,2026-08-15
+pest_sc_001,Carbendazim 50% WP,Bavistin 50 WP,Sugarcane,Red Rot & Smut,WP (Wettable Powder),1.0 g/L sett dipping 30 min,N/A,0.02 ppm,ICAR-SBI Coimbatore & VSI Pune,https://sugarcane.icar.gov.in,VERIFIED,2026-08-10
+pest_sc_002,Trichoderma viride 1.5% WP,Bio-Cure-F,Sugarcane,Red Rot & Soil Borne Fungi,WP (Bio-agent),10.0 g/L sett dip & soil app,0 days,Exempt,ICAR-SBI Coimbatore,https://sugarcane.icar.gov.in,VERIFIED,2026-08-10
+pest_wh_001,Propiconazole 25% EC,Tilt 25 EC,Wheat,Yellow Stripe Rust & Brown Rust,EC (Emulsifiable Concentrate),1.0 ml/L foliar spray,30 days,0.05 ppm,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in,VERIFIED,2026-08-12
+pest_wh_002,Tebuconazole 25.9% EC,Folicur 25.9 EC,Wheat,Yellow Stripe Rust & Spot Blotch,EC (Emulsifiable Concentrate),1.0 ml/L foliar spray,25 days,0.05 ppm,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in,VERIFIED,2026-08-12
+pest_wh_003,Azoxystrobin 18.2% + Difenoconazole 11.4% SC,Amistar Top,Wheat,Rust Complex & Blights,SC (Suspension Concentrate),1.0 ml/L foliar spray,35 days,0.05 ppm,CIB&RC Registered Uses,https://ppqs.gov.in,VERIFIED,2026-08-12

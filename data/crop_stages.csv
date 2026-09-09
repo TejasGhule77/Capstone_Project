@@ -1,0 +1,19 @@
+stage_id,crop_id,stage_name,description,duration,verification_status,source,source_url
+stg_on_01,crop_onion,Nursery & Seedling,Germination and seedling establishment in nursery beds,30-45 days,VERIFIED,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in
+stg_on_02,crop_onion,Transplanting & Vegetative,Root establishment and rapid foliar vegetative leaf emergence,30-40 days,VERIFIED,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in
+stg_on_03,crop_onion,Bulb Initiation & Development,Bulb swelling neck development and nutrient translocation,35-45 days,VERIFIED,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in
+stg_on_04,crop_onion,Maturity & Harvest,Foliage top neck fall 50% curing and harvesting,15-20 days,VERIFIED,ICAR-DOGR Rajgurunagar,https://dogr.icar.gov.in
+stg_gp_01,crop_grapes,Foundation Pruning & Sprouting,April back pruning shoot thinning and cane development,30-45 days,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+stg_gp_02,crop_grapes,Forward Pruning & Bud Burst,October forward pruning bud sprouting and inflorescence emergence,20-30 days,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+stg_gp_03,crop_grapes,Flowering & Fruit Set,Caps fall anthesis berry setting and cluster elongation,20-25 days,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+stg_gp_04,crop_grapes,Berry Development & Veraison,Berry enlargement thinning softening sugar accumulation,45-60 days,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+stg_gp_05,crop_grapes,Harvest & Post-Harvest,Brix 16-18 harvest cold storage and post-harvest canopy care,20-30 days,VERIFIED,ICAR-NRC Grapes Pune,https://nrcgrapes.icar.gov.in
+stg_sc_01,crop_sugarcane,Germination & Sett Establishment,Sprouting of bud setts and root initiation,30-45 days,VERIFIED,ICAR-SBI Coimbatore / VSI Pune,https://sugarcane.icar.gov.in
+stg_sc_02,crop_sugarcane,Tillering Phase,Formation of multiple tillers and canopy closure,45-90 days,VERIFIED,ICAR-SBI Coimbatore / VSI Pune,https://sugarcane.icar.gov.in
+stg_sc_03,crop_sugarcane,Grand Growth Period,Rapid internode elongation and cane biomass accumulation,120-180 days,VERIFIED,ICAR-SBI Coimbatore / VSI Pune,https://sugarcane.icar.gov.in
+stg_sc_04,crop_sugarcane,Ripening & Maturity,Sugar synthesis sucrose concentration and harvesting,60-90 days,VERIFIED,ICAR-SBI Coimbatore / VSI Pune,https://sugarcane.icar.gov.in
+stg_wh_01,crop_wheat,Crown Root Initiation (CRI),First critical irrigation stage root anchoring at 21 DAS,20-25 days,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in
+stg_wh_02,crop_wheat,Tillering & Jointing,Stem extension nodes formation and spikelet initiation,30-40 days,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in
+stg_wh_03,crop_wheat,Booting & Flowering,Ear emergence pollination anthesis and grain fertilization,20-25 days,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in
+stg_wh_04,crop_wheat,Milking & Dough Stage,Grain filling carbohydrate storage dough hardening,25-35 days,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in
+stg_wh_05,crop_wheat,Physiological Maturity,Golden yellow straw moisture below 12% harvest,10-15 days,VERIFIED,ICAR-IIWBR Karnal,https://iiwbr.icar.gov.in

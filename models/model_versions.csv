@@ -1,0 +1,7 @@
+model_id,model_name,version,crop,dataset,accuracy,precision,recall,f1_score,status,created_at
+mdl_dis_01,AgriIntel-Vision-Onion-CNN,v1.0.0,Onion,ICAR-DOGR Field Leaf Blotch Set,N/A,N/A,N/A,N/A,DEMO,2026-08-20
+mdl_dis_02,AgriIntel-Vision-Grapes-ResNet,v1.0.0,Grapes,NRCG Mildew-Anthracnose Multi-Spectral,N/A,N/A,N/A,N/A,DEMO,2026-08-20
+mdl_dis_03,AgriIntel-Vision-Sugarcane-MobileNet,v1.0.0,Sugarcane,SBI Coimbatore Red-Rot Foliar,N/A,N/A,N/A,N/A,DEMO,2026-08-20
+mdl_dis_04,AgriIntel-Vision-Wheat-EfficientNet,v1.0.0,Wheat,IIWBR Rust Foliar Benchmark,N/A,N/A,N/A,N/A,DEMO,2026-08-20
+mdl_sev_01,AgriIntel-Severity-Estimator,v1.0.0,All Crops,Agro-Canopy Severity Benchmark,N/A,N/A,N/A,N/A,DEMO,2026-08-20
+mdl_rsk_01,AgriIntel-Agromet-Risk-Engine,v1.0.0,All Crops,IMD-Agromet Agrometeorological Timeseries,N/A,N/A,N/A,N/A,DEMO,2026-08-20

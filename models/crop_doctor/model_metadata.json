@@ -1,0 +1,22 @@
+{
+  "model_id": "CD-RESNET18-V2",
+  "model_name": "AgriIntel Crop Doctor Plant Pathology Vision Classifier",
+  "version": "2.1.0",
+  "framework": "PyTorch (ResNet-18)",
+  "architecture": "ResNet-18",
+  "input_size": [3, 224, 224],
+  "mean_normalization": [0.485, 0.456, 0.406],
+  "std_normalization": [0.229, 0.224, 0.225],
+  "num_classes": 39,
+  "confidence_threshold": 0.50,
+  "supported_primary_crops": ["Onion", "Grapes", "Sugarcane", "Wheat"],
+  "training_dataset": "AgriIntel AgroVision & PlantVillage Benchmark",
+  "dataset_version": "AGRIIMG-2026-09",
+  "accuracy": 0.9682,
+  "precision": 0.9641,
+  "recall": 0.9618,
+  "f1_score": 0.9629,
+  "trained_date": "2026-08-28",
+  "status": "ACTIVE",
+  "source": "ICAR-NRC Grapes / DOGR / SBI / IIWBR & AgriIntel Research"
+}

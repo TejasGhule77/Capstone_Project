@@ -1,0 +1,119 @@
+{
+  "9876543210": {
+    "id": "usr_demo_001",
+    "name": "Pranali Patil",
+    "email": "pranali.farmer@agriintel.in",
+    "mobile": "9876543210",
+    "password": "demo_password",
+    "village": "Junnar",
+    "district": "Pune",
+    "state": "Maharashtra",
+    "farm_size_acres": 4.5,
+    "selected_crops": [
+      "Grapes",
+      "Onion",
+      "Sugarcane"
+    ],
+    "language": "en",
+    "farming_experience_years": 8,
+    "farms": [
+      {
+        "farm_id": "farm_001",
+        "user_id": "usr_demo_001",
+        "farm_name": "Shivneri Vineyards & Onion Plot",
+        "village": "Junnar",
+        "district": "Pune",
+        "state": "Maharashtra",
+        "latitude": 19.2087,
+        "longitude": 73.8789,
+        "area": 4.5,
+        "area_unit": "Acres",
+        "soil_type": "Medium Black Clay Loam",
+        "irrigation_type": "Drip Irrigation",
+        "created_at": "2026-08-01T10:00:00Z",
+        "updated_at": "2026-09-01T10:00:00Z"
+      }
+    ],
+    "is_demo": true,
+    "verification_status": "DEMO",
+    "created_at": "2026-09-09T09:22:40.834367+00:00",
+    "updated_at": "2026-09-09T09:22:40.834367+00:00"
+  },
+  "9988776655": {
+    "id": "usr_f0836151",
+    "name": "Sanjay Deshmukh",
+    "email": "sanjay@agriintel.in",
+    "mobile": "9988776655",
+    "password": "demo_password",
+    "village": "Ozar",
+    "district": "Nashik",
+    "state": "Maharashtra",
+    "farm_size_acres": 6.5,
+    "selected_crops": [
+      "Grapes",
+      "Sugarcane"
+    ],
+    "language": "mr",
+    "farming_experience_years": 8,
+    "farms": [
+      {
+        "farm_id": "frm_9949f3f6",
+        "user_id": "usr_f0836151",
+        "farm_name": "Sanjay Deshmukh's Farm",
+        "village": "Ozar",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 5.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation",
+        "created_at": null,
+        "updated_at": null
+      }
+    ],
+    "is_demo": false,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-09-09T09:22:41.290990+00:00",
+    "updated_at": "2026-09-09T09:22:41.369726+00:00"
+  },
+  "7387929005": {
+    "id": "usr_fb7f7014",
+    "name": "Tejas Ghule",
+    "email": "tejasghule23@gmail.com",
+    "mobile": "7387929005",
+    "password": "Tejas@23",
+    "village": "kadegaon",
+    "district": "Sangli",
+    "state": "Maharashtra",
+    "farm_size_acres": 7.0,
+    "selected_crops": [
+      "Onion",
+      "Sugarcane",
+      "Grapes"
+    ],
+    "language": "en",
+    "farming_experience_years": 5,
+    "farms": [
+      {
+        "farm_id": "frm_e9066dff",
+        "user_id": "usr_fb7f7014",
+        "farm_name": "Tejas Ghule's Farm",
+        "village": "kadegaon",
+        "district": "Sangli",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 7.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation"
+      }
+    ],
+    "is_demo": false,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-09-09T09:22:40.834367+00:00",
+    "updated_at": "2026-09-09T09:26:03.636109+00:00"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "accuracy": 0.9682,
+  "precision": 0.9641,
+  "recall": 0.9618,
+  "f1_score": 0.9629,
+  "evaluation_metrics": {
+    "overall_accuracy": 0.9682,
+    "macro_precision": 0.9641,
+    "macro_recall": 0.9618,
+    "macro_f1": 0.9629,
+    "test_loss": 0.0842,
+    "total_test_samples": 5420
+  },
+  "per_class_performance": {
+    "Grape___Black_rot": {"precision": 0.975, "recall": 0.968, "f1_score": 0.971, "support": 236},
+    "Grape___Esca_(Black_Measles)": {"precision": 0.962, "recall": 0.958, "f1_score": 0.960, "support": 276},
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {"precision": 0.981, "recall": 0.974, "f1_score": 0.977, "support": 215},
+    "Grape___healthy": {"precision": 0.990, "recall": 0.992, "f1_score": 0.991, "support": 210},
+    "Onion___Purple_blotch": {"precision": 0.952, "recall": 0.946, "f1_score": 0.949, "support": 190},
+    "Onion___Stemphylium_blight": {"precision": 0.948, "recall": 0.941, "f1_score": 0.944, "support": 185},
+    "Onion___healthy": {"precision": 0.985, "recall": 0.980, "f1_score": 0.982, "support": 175},
+    "Sugarcane___Red_rot": {"precision": 0.958, "recall": 0.950, "f1_score": 0.954, "support": 210},
+    "Sugarcane___Smut": {"precision": 0.964, "recall": 0.959, "f1_score": 0.961, "support": 195},
+    "Sugarcane___healthy": {"precision": 0.988, "recall": 0.984, "f1_score": 0.986, "support": 180},
+    "Wheat___Yellow_stripe_rust": {"precision": 0.972, "recall": 0.968, "f1_score": 0.970, "support": 220},
+    "Wheat___Brown_rust": {"precision": 0.966, "recall": 0.961, "f1_score": 0.963, "support": 205},
+    "Wheat___healthy": {"precision": 0.991, "recall": 0.990, "f1_score": 0.990, "support": 190}
+  },
+  "dataset_split": {
+    "train_pct": 70,
+    "val_pct": 15,
+    "test_pct": 15,
+    "class_imbalance_handling": "Focal Loss & Dynamic Class Weighting"
+  }
+}

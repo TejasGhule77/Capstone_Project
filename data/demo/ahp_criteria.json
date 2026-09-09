@@ -1,0 +1,28 @@
+{
+  "criteria": [
+    {"id": "c1", "name": "Yield Potential", "description": "Expected productivity per hectare", "type": "benefit"},
+    {"id": "c2", "name": "Market Price Stability", "description": "Expected revenue and price volatility", "type": "benefit"},
+    {"id": "c3", "name": "Water Requirement", "description": "Irrigation needs and drought vulnerability", "type": "cost"},
+    {"id": "c4", "name": "Pest Disease Risk", "description": "Susceptibility to seasonal pests/fungal attack", "type": "cost"},
+    {"id": "c5", "name": "Soil Suitability", "description": "Match with local soil texture and pH", "type": "benefit"}
+  ],
+  "pairwise_matrix": [
+    [1.00, 2.00, 3.00, 3.00, 4.00],
+    [0.50, 1.00, 2.00, 2.00, 3.00],
+    [0.33, 0.50, 1.00, 1.00, 2.00],
+    [0.33, 0.50, 1.00, 1.00, 2.00],
+    [0.25, 0.33, 0.50, 0.50, 1.00]
+  ],
+  "derived_weights": {
+    "Yield Potential": 0.384,
+    "Market Price Stability": 0.246,
+    "Water Requirement": 0.142,
+    "Pest Disease Risk": 0.142,
+    "Soil Suitability": 0.086
+  },
+  "consistency_index_ci": 0.016,
+  "random_index_ri": 1.12,
+  "consistency_ratio_cr": 0.0143,
+  "is_consistent": true,
+  "verification_status": "DEMO"
+}

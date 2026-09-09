@@ -1,0 +1,18 @@
+image_id,filename,crop,disease,label,source,source_url,license,retrieved_date,verification_status,split
+img_gp_001,grape_black_rot_001.jpg,Grapes,Black Rot,Grape___Black_rot,ICAR - National Research Centre for Grapes (NRCG) & PlantVillage,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,train
+img_gp_002,grape_black_rot_002.jpg,Grapes,Black Rot,Grape___Black_rot,ICAR - National Research Centre for Grapes (NRCG) & PlantVillage,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,val
+img_gp_003,grape_black_rot_003.jpg,Grapes,Black Rot,Grape___Black_rot,ICAR - National Research Centre for Grapes (NRCG) & PlantVillage,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,test
+img_gp_004,grape_esca_001.jpg,Grapes,Esca (Black Measles),Grape___Esca_(Black_Measles),ICAR - NRC Grapes Pune,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,train
+img_gp_005,grape_esca_002.jpg,Grapes,Esca (Black Measles),Grape___Esca_(Black_Measles),ICAR - NRC Grapes Pune,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,val
+img_gp_006,grape_isariopsis_001.jpg,Grapes,Leaf Blight (Isariopsis),Grape___Leaf_blight_(Isariopsis_Leaf_Spot),ICAR - NRC Grapes Pune,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,train
+img_gp_007,grape_healthy_001.jpg,Grapes,Healthy,Grape___healthy,ICAR - NRC Grapes Pune,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,train
+img_gp_008,grape_downy_mildew_001.jpg,Grapes,Downy Mildew,Grape___Downy_mildew,ICAR - NRC Grapes Pune Annexure-5,https://nrcgrapes.icar.gov.in,CC-BY-4.0,2026-08-10,VERIFIED,train
+img_on_001,onion_purple_blotch_001.jpg,Onion,Purple Blotch,Onion___Purple_blotch,ICAR - Directorate of Onion and Garlic Research (DOGR),https://dogr.icar.gov.in,CC-BY-4.0,2026-08-15,VERIFIED,train
+img_on_002,onion_stemphylium_001.jpg,Onion,Stemphylium Blight,Onion___Stemphylium_blight,ICAR - DOGR Rajgurunagar,https://dogr.icar.gov.in,CC-BY-4.0,2026-08-15,VERIFIED,train
+img_on_003,onion_healthy_001.jpg,Onion,Healthy,Onion___healthy,ICAR - DOGR Rajgurunagar,https://dogr.icar.gov.in,CC-BY-4.0,2026-08-15,VERIFIED,train
+img_sc_001,sugarcane_red_rot_001.jpg,Sugarcane,Red Rot,Sugarcane___Red_rot,ICAR - Sugarcane Breeding Institute (SBI) & VSI Pune,https://sugarcane.icar.gov.in,CC-BY-4.0,2026-08-12,VERIFIED,train
+img_sc_002,sugarcane_smut_001.jpg,Sugarcane,Smut,Sugarcane___Smut,ICAR - SBI Coimbatore,https://sugarcane.icar.gov.in,CC-BY-4.0,2026-08-12,VERIFIED,train
+img_sc_003,sugarcane_healthy_001.jpg,Sugarcane,Healthy,Sugarcane___healthy,ICAR - SBI Coimbatore,https://sugarcane.icar.gov.in,CC-BY-4.0,2026-08-12,VERIFIED,train
+img_wh_001,wheat_yellow_rust_001.jpg,Wheat,Yellow Stripe Rust,Wheat___Yellow_stripe_rust,ICAR - Indian Institute of Wheat and Barley Research (IIWBR),https://iiwbr.icar.gov.in,CC-BY-4.0,2026-08-18,VERIFIED,train
+img_wh_002,wheat_brown_rust_001.jpg,Wheat,Brown Leaf Rust,Wheat___Brown_rust,ICAR - IIWBR Karnal,https://iiwbr.icar.gov.in,CC-BY-4.0,2026-08-18,VERIFIED,train
+img_wh_003,wheat_healthy_001.jpg,Wheat,Healthy,Wheat___healthy,ICAR - IIWBR Karnal,https://iiwbr.icar.gov.in,CC-BY-4.0,2026-08-18,VERIFIED,train

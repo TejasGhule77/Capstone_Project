@@ -1,0 +1,6 @@
+criteria_id,criteria_name,weight,verification_status
+crit_01,Problem Relevance,0.35,VERIFIED
+crit_02,Crop Compatibility,0.25,VERIFIED
+crit_03,Weather Suitability & Gatekeeper,0.20,VERIFIED
+crit_04,Source Verification & Regulatory Approval,0.10,VERIFIED
+crit_05,PHI & Food Safety Compliance,0.10,VERIFIED

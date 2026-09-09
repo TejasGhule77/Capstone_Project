@@ -1,0 +1,5 @@
+crop_id,crop_name,scientific_name,crop_type,verification_status,source,source_url,last_verified
+crop_onion,Onion,Allium cepa,Vegetable / Bulb,VERIFIED,ICAR - Directorate of Onion and Garlic Research (DOGR) Rajgurunagar,https://dogr.icar.gov.in,2026-08-15
+crop_grapes,Grapes,Vitis vinifera,Horticulture / Fruit,VERIFIED,ICAR - National Research Centre for Grapes (NRCG) Pune,https://nrcgrapes.icar.gov.in,2026-08-20
+crop_sugarcane,Sugarcane,Saccharum officinarum,Commercial / Cash Crop,VERIFIED,ICAR - Sugarcane Breeding Institute (SBI) Coimbatore & VSI Pune,https://sugarcane.icar.gov.in,2026-08-10
+crop_wheat,Wheat,Triticum aestivum,Cereal / Food Grain,VERIFIED,ICAR - Indian Institute of Wheat and Barley Research (IIWBR) Karnal,https://iiwbr.icar.gov.in,2026-08-12

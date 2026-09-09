@@ -1,0 +1,13 @@
+recommendation_id,pesticide_id,criterion,score,weighted_score,final_score
+rec_001,pest_gp_001,Problem Relevance,0.9,0.315,0.885
+rec_002,pest_gp_002,Problem Relevance,0.9,0.315,0.885
+rec_003,pest_gp_003,Problem Relevance,0.9,0.315,0.885
+rec_004,pest_gp_004,Problem Relevance,0.9,0.315,0.885
+rec_005,pest_on_001,Problem Relevance,0.9,0.315,0.885
+rec_006,pest_on_002,Problem Relevance,0.9,0.315,0.885
+rec_007,pest_on_003,Problem Relevance,0.9,0.315,0.885
+rec_008,pest_sc_001,Problem Relevance,0.9,0.315,0.885
+rec_009,pest_sc_002,Problem Relevance,0.9,0.315,0.885
+rec_010,pest_wh_001,Problem Relevance,0.9,0.315,0.885
+rec_011,pest_wh_002,Problem Relevance,0.9,0.315,0.885
+rec_012,pest_wh_003,Problem Relevance,0.9,0.315,0.885

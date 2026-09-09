@@ -1,0 +1,58 @@
+[
+  {
+    "id": "onion",
+    "name": "Onion",
+    "scientific_name": "Allium cepa",
+    "marathi_name": "कांदा",
+    "season": ["Rabi", "Kharif", "Late Kharif"],
+    "ideal_temp_c": {"min": 13, "max": 30},
+    "ideal_rainfall_mm": {"min": 650, "max": 750},
+    "soil_type": ["Sandy loam", "Clay loam with good drainage"],
+    "optimal_ph": {"min": 6.0, "max": 7.5},
+    "duration_days": 120,
+    "major_districts": ["Nashik", "Pune", "Solapur", "Ahmednagar"],
+    "verification_status": "DEMO"
+  },
+  {
+    "id": "grapes",
+    "name": "Grapes",
+    "scientific_name": "Vitis vinifera",
+    "marathi_name": "द्राक्षे",
+    "season": ["Perennial", "Pruning: April & Oct"],
+    "ideal_temp_c": {"min": 15, "max": 38},
+    "ideal_rainfall_mm": {"min": 500, "max": 800},
+    "soil_type": ["Well-drained sandy loam", "Red loam"],
+    "optimal_ph": {"min": 6.5, "max": 8.0},
+    "duration_days": 150,
+    "major_districts": ["Nashik", "Sangli", "Solapur", "Pune"],
+    "verification_status": "DEMO"
+  },
+  {
+    "id": "sugarcane",
+    "name": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "marathi_name": "ऊस",
+    "season": ["Eksali", "Pre-seasonal", "Suru"],
+    "ideal_temp_c": {"min": 20, "max": 35},
+    "ideal_rainfall_mm": {"min": 1500, "max": 2500},
+    "soil_type": ["Deep rich loamy soil", "Black cotton soil"],
+    "optimal_ph": {"min": 6.5, "max": 7.8},
+    "duration_days": 365,
+    "major_districts": ["Kolhapur", "Pune", "Satara", "Sangli", "Solapur"],
+    "verification_status": "DEMO"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "marathi_name": "गहू",
+    "season": ["Rabi"],
+    "ideal_temp_c": {"min": 10, "max": 25},
+    "ideal_rainfall_mm": {"min": 350, "max": 500},
+    "soil_type": ["Clay loam", "Well-drained loam"],
+    "optimal_ph": {"min": 6.0, "max": 7.5},
+    "duration_days": 110,
+    "major_districts": ["Pune", "Satara", "Solapur", "Ahmednagar", "Nashik"],
+    "verification_status": "DEMO"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "crop_id": "onion",
+    "crop_name": "Onion",
+    "stages": [
+      {
+        "stage_id": "nursery",
+        "stage_name": "Nursery & Seedling",
+        "days_range": "1-35",
+        "key_practices": "Soil solarization, Trichoderma treatment, mild watering",
+        "critical_pests": ["Thrips", "Damping off"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "transplanting",
+        "stage_name": "Transplanting & Establishment",
+        "days_range": "36-55",
+        "key_practices": "Spacing 15x10cm, basal NPK fertilizer, light irrigation",
+        "critical_pests": ["Root rot", "Thrips"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "bulb_initiation",
+        "stage_name": "Bulb Initiation & Development",
+        "days_range": "56-95",
+        "key_practices": "Top dressing Nitrogen and Potash, keep soil consistently moist",
+        "critical_pests": ["Purple blotch", "Stemphyllium blight"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "maturity_harvest",
+        "stage_name": "Maturity & Neck Fall",
+        "days_range": "96-120",
+        "key_practices": "Stop irrigation 10-15 days before harvest, curing under shade",
+        "critical_pests": ["Storage rot"],
+        "verification_status": "DEMO"
+      }
+    ],
+    "verification_status": "DEMO"
+  },
+  {
+    "crop_id": "grapes",
+    "crop_name": "Grapes",
+    "stages": [
+      {
+        "stage_id": "pruning_budbreak",
+        "stage_name": "Post-Pruning & Budbreak",
+        "days_range": "1-20",
+        "key_practices": "Dormex paste application, Copper oxychloride wash",
+        "critical_pests": ["Flea beetle", "Anthracnose"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "flowering_fruitset",
+        "stage_name": "Shooting & Flowering",
+        "days_range": "21-50",
+        "key_practices": "Gibberellic acid (GA3) thinning dip, micronutrient foliar spray",
+        "critical_pests": ["Downy mildew", "Powdery mildew", "Thrips"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "berry_development",
+        "stage_name": "Berry Elongation & Softening",
+        "days_range": "51-110",
+        "key_practices": "Cluster dipping, canopy management, Potassium fertigation",
+        "critical_pests": ["Mealybugs", "Powdery mildew"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "harvest",
+        "stage_name": "Sugar Accumulation & Harvesting",
+        "days_range": "111-150",
+        "key_practices": "Brix testing (>18°), harvest during cool morning hours",
+        "critical_pests": ["Berry rot", "Bird damage"],
+        "verification_status": "DEMO"
+      }
+    ],
+    "verification_status": "DEMO"
+  },
+  {
+    "crop_id": "sugarcane",
+    "crop_name": "Sugarcane",
+    "stages": [
+      {
+        "stage_id": "germination",
+        "stage_name": "Germination & Settling",
+        "days_range": "1-45",
+        "key_practices": "Two-budded sett treatment with Carbendazim, furrow irrigation",
+        "critical_pests": ["Early shoot borer", "Termites"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "tillering",
+        "stage_name": "Tillering & Formative",
+        "days_range": "46-120",
+        "key_practices": "Partial earthing up, first split NPK application",
+        "critical_pests": ["Shoot borer", "Pyrilla"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "grand_growth",
+        "stage_name": "Grand Growth & Cane Elongation",
+        "days_range": "121-270",
+        "key_practices": "Full earthing up, trash mulching, adequate drip irrigation",
+        "critical_pests": ["Top borer", "Red rot", "Scale insect"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "ripening",
+        "stage_name": "Ripening & Harvesting",
+        "days_range": "271-365",
+        "key_practices": "Reduce irrigation to increase sugar concentration, hand cutting",
+        "critical_pests": ["Woolly aphid", "Rodents"],
+        "verification_status": "DEMO"
+      }
+    ],
+    "verification_status": "DEMO"
+  },
+  {
+    "crop_id": "wheat",
+    "crop_name": "Wheat",
+    "stages": [
+      {
+        "stage_id": "crown_root",
+        "stage_name": "Crown Root Initiation (CRI)",
+        "days_range": "20-25",
+        "key_practices": "Most critical irrigation stage, top dressing Urea",
+        "critical_pests": ["Termites", "Foot rot"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "tillering_jointing",
+        "stage_name": "Tillering & Jointing",
+        "days_range": "26-60",
+        "key_practices": "Weed control, second irrigation, Zinc sulphate application",
+        "critical_pests": ["Aphids", "Brown rust"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "flowering_milking",
+        "stage_name": "Flowering & Milking",
+        "days_range": "61-90",
+        "key_practices": "Maintain soil moisture, avoid irrigation during strong winds",
+        "critical_pests": ["Yellow rust", "Loose smut"],
+        "verification_status": "DEMO"
+      },
+      {
+        "stage_id": "dough_maturity",
+        "stage_name": "Dough & Maturity",
+        "days_range": "91-110",
+        "key_practices": "Grains become hard, harvest when straw turns golden yellow",
+        "critical_pests": ["Storage weevil"],
+        "verification_status": "DEMO"
+      }
+    ],
+    "verification_status": "DEMO"
+  }
+]

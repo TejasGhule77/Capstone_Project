@@ -1,0 +1,74 @@
+[
+  {
+    "id": "adv_onion_001",
+    "crop_id": "onion",
+    "crop_name": "Onion",
+    "stage": "Bulb Initiation",
+    "alert_type": "URGENT",
+    "title": "Purple Blotch Prophylactic Advisory",
+    "summary": "High morning dew and moderate daytime temperature favor purple blotch outbreak in Nashik & Pune belts.",
+    "action_points": [
+      "Spray Mancozeb 75% WP @ 2.5g/L or Tebuconazole @ 1ml/L within the next 48 hours.",
+      "Ensure spray window is between 07:00 AM - 10:30 AM when wind speed is under 10 km/h.",
+      "Add sticker/spreader agent (0.5ml/L) due to waxy onion foliage."
+    ],
+    "weather_gatekeeper_status": "GOOD TO SPRAY",
+    "ahp_score": 0.88,
+    "blockchain_proof": "sha256:4b227777d4da1fc151ee0f6564e9a3d6990264e718e80e6c7dc356b3e41459a7",
+    "verification_status": "DEMO"
+  },
+  {
+    "id": "adv_grape_002",
+    "crop_id": "grapes",
+    "crop_name": "Grapes",
+    "stage": "Shooting & Flowering",
+    "alert_type": "WARNING",
+    "title": "Downy Mildew & Berry Thinning Protocols",
+    "summary": "Recent cloud cover raises humidity above 75%. Protect inflorescence clusters.",
+    "action_points": [
+      "Apply Potassium Phosphonate @ 3g/L for systemic oomycete protection.",
+      "Perform manual cluster tipping to ensure uniform berry elongation.",
+      "Check underside of lower leaves for oily patches."
+    ],
+    "weather_gatekeeper_status": "GOOD TO SPRAY",
+    "ahp_score": 0.94,
+    "blockchain_proof": "sha256:7c992d551bfa3ca3ee45812d6fee2ca014856f690226346addd1c60144c10f5f",
+    "verification_status": "DEMO"
+  },
+  {
+    "id": "adv_sugarcane_003",
+    "crop_id": "sugarcane",
+    "crop_name": "Sugarcane",
+    "stage": "Tillering & Formative",
+    "alert_type": "INFO",
+    "title": "Early Shoot Borer & Fertigation Schedule",
+    "summary": "Tillering stage requires balanced nitrogen top dressing and soil moisture preservation.",
+    "action_points": [
+      "Release Trichogramma chilonis egg parasitoids @ 20,000/acre.",
+      "Apply first split fertigation: Urea 50kg + MOP 25kg per acre.",
+      "Carry out partial earthing up to suppress late tiller emergence."
+    ],
+    "weather_gatekeeper_status": "GOOD TO SPRAY",
+    "ahp_score": 0.82,
+    "blockchain_proof": "sha256:a1552a46b029288e367cf8f41ec432cfa2356ee258de120364f7b6059d81640a",
+    "verification_status": "DEMO"
+  },
+  {
+    "id": "adv_wheat_004",
+    "crop_id": "wheat",
+    "crop_name": "Wheat",
+    "stage": "Crown Root Initiation (CRI)",
+    "alert_type": "CRITICAL",
+    "title": "First Irrigation & Weed Control Window",
+    "summary": "Crown Root Initiation (21-25 DAS) is the most yield-sensitive stage for wheat.",
+    "action_points": [
+      "Give first critical irrigation immediately if not done within 25 days of sowing.",
+      "Apply 50% recommended Nitrogen dose as top dressing after field attains optimum moisture.",
+      "Monitor field borders for yellow rust patches."
+    ],
+    "weather_gatekeeper_status": "GOOD TO SPRAY",
+    "ahp_score": 0.91,
+    "blockchain_proof": "sha256:88e0b19d2112d6a54fe56b9c974c0b4317769efab610a265112e431f798be12f",
+    "verification_status": "DEMO"
+  }
+]

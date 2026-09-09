@@ -1,0 +1,7 @@
+model_id,model_name,version,crop,framework,input_size,classes,dataset_version,accuracy,precision,recall,f1_score,created_date,status
+CD-RESNET18-V2,AgriIntel Crop Doctor Vision Classifier,v2.1.0,All Crops,PyTorch (ResNet-18),224x224,39,AGRIIMG-2026-09,0.9682,0.9641,0.9618,0.9629,2026-08-28,ACTIVE
+CD-ONION-V1,AgriIntel Onion Foliar Pathogen Specialist,v1.0.0,Onion,CNN-Transfer,224x224,4,DOGR-ONION-2026,0.9520,0.9460,0.9410,0.9435,2026-08-20,ACTIVE
+CD-GRAPE-V1,AgriIntel Grape Mildew & Esca Specialist,v1.0.0,Grapes,ResNet-18,224x224,5,NRCG-GRAPE-2026,0.9780,0.9740,0.9710,0.9725,2026-08-20,ACTIVE
+CD-SUGARCANE-V1,AgriIntel Sugarcane Red Rot Detector,v1.0.0,Sugarcane,MobileNetV3,224x224,4,SBI-CANE-2026,0.9580,0.9510,0.9480,0.9495,2026-08-20,ACTIVE
+CD-WHEAT-V1,AgriIntel Wheat Stripe Rust Vision Engine,v1.0.0,Wheat,EfficientNet-Lite,224x224,4,IIWBR-WHEAT-2026,0.9690,0.9650,0.9620,0.9635,2026-08-20,ACTIVE
+AGRO-RISK-V1,AgriIntel Microclimate Agromet Gatekeeper,v1.0.0,All Crops,Rule Engine,N/A,N/A,IMD-AGROMET-2026,0.9900,0.9850,0.9920,0.9885,2026-09-01,ACTIVE

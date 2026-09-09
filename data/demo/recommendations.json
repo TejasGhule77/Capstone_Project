@@ -1,0 +1,51 @@
+[
+  {
+    "district": "Pune",
+    "recommended_crops": [
+      {
+        "crop_id": "grapes",
+        "crop_name": "Grapes",
+        "composite_ahp_score": 0.892,
+        "rank": 1,
+        "expected_yield_t_ha": 24.5,
+        "projected_profit_inr_acre": 285000,
+        "primary_reason": "High export market price and well-drained sandy loam soil compatibility in Junnar/Indapur belts.",
+        "verification_status": "DEMO"
+      },
+      {
+        "crop_id": "onion",
+        "crop_name": "Onion",
+        "composite_ahp_score": 0.824,
+        "rank": 2,
+        "expected_yield_t_ha": 18.2,
+        "projected_profit_inr_acre": 140000,
+        "primary_reason": "Optimal Rabi climate and strong proximity to APMC markets.",
+        "verification_status": "DEMO"
+      },
+      {
+        "crop_id": "sugarcane",
+        "crop_name": "Sugarcane",
+        "composite_ahp_score": 0.765,
+        "rank": 3,
+        "expected_yield_t_ha": 95.0,
+        "projected_profit_inr_acre": 165000,
+        "primary_reason": "Adequate canal irrigation support in Baramati and Shirur talukas.",
+        "verification_status": "DEMO"
+      },
+      {
+        "crop_id": "wheat",
+        "crop_name": "Wheat",
+        "composite_ahp_score": 0.710,
+        "rank": 4,
+        "expected_yield_t_ha": 3.8,
+        "projected_profit_inr_acre": 48000,
+        "primary_reason": "Low water requirement for short winter rotation.",
+        "verification_status": "DEMO"
+      }
+    ],
+    "soil_n_p_k": {"N": 240, "P": 45, "K": 280},
+    "soil_ph": 7.2,
+    "rainfall_scenario": "Normal (720mm)",
+    "verification_status": "DEMO"
+  }
+]
