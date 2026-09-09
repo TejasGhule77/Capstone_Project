@@ -238,4 +238,5 @@ AgriIntel data is curated directly from statutory and government research author
 
 *AgriIntel provides advisory precision decision support based on agrometeorological rules, machine learning diagnostics, and CIB&RC label claims. Field decisions should always adhere to official statutory pesticide labels, local Krishi Vigyan Kendra (KVK) guidance, and environmental safety regulations.*
 #   A g r i I n t e l  
+ #   A g r i I n t e l  
  
