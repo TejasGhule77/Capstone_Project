@@ -1,3 +1,6 @@
+export 'pesticide_inventory.dart';
+export 'pesticide_comparison.dart';
+
 class FarmModel {
   final String farmId;
   final String userId;
@@ -515,3 +518,4 @@ class BlockchainVerifyResult {
     );
   }
 }
+

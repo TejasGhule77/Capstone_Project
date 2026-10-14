@@ -1,18 +1,130 @@
 {
+  "8848243646": {
+    "id": "usr_55ae34a1",
+    "name": "Yuraj Patil",
+    "email": "yuvrajpatil0103@gmail.com",
+    "mobile": "8848243646",
+    "password": "Yuvi@23",
+    "village": "Tasgaon",
+    "district": "Sangli",
+    "state": "Maharashtra",
+    "farm_size_acres": 10.0,
+    "selected_crops": [
+      "Sugarcane",
+      "Grapes",
+      "Wheat"
+    ],
+    "language": "en",
+    "farming_experience_years": 5,
+    "farms": [
+      {
+        "farm_id": "frm_6f823e62",
+        "user_id": "usr_55ae34a1",
+        "farm_name": "Yuraj Patil's Farm",
+        "village": "Tasgaon",
+        "district": "Sangli",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 10.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation"
+      }
+    ],
+    "is_demo": false,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-09-09T20:27:17.984857+00:00",
+    "updated_at": "2026-09-09T20:27:38.210643+00:00"
+  },
+  "7757945613": {
+    "id": "usr_3e91ab7a",
+    "name": "Shreyas Ghule",
+    "email": "shreyasghule23@gmail.com",
+    "mobile": "7757945613",
+    "password": "Shreyas@23",
+    "village": "Pandharpu",
+    "district": "Solapur",
+    "state": "Maharashtra",
+    "farm_size_acres": 7.0,
+    "selected_crops": [
+      "Grapes",
+      "Onion"
+    ],
+    "language": "en",
+    "farming_experience_years": 5,
+    "farms": [
+      {
+        "farm_id": "frm_29b0957d",
+        "user_id": "usr_3e91ab7a",
+        "farm_name": "Shreyas Ghule's Farm",
+        "village": "Pandharpu",
+        "district": "Solapur",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 7.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation"
+      }
+    ],
+    "is_demo": false,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-10-05T11:10:40.680888+00:00",
+    "updated_at": "2026-10-05T11:10:40.680888+00:00"
+  },
+  "7385095817": {
+    "id": "usr_000cc068",
+    "name": "Prachi Mohite",
+    "email": "tejasghule2395@gmail.com",
+    "mobile": "7385095817",
+    "password": "Prachi@23",
+    "village": "Kadegaon",
+    "district": "Sangli",
+    "state": "Maharashtra",
+    "farm_size_acres": 10.0,
+    "selected_crops": [
+      "Grapes",
+      "Onion"
+    ],
+    "language": "en",
+    "farming_experience_years": 5,
+    "farms": [
+      {
+        "farm_id": "frm_981e225e",
+        "user_id": "usr_000cc068",
+        "farm_name": "Prachi Mohite's Farm",
+        "village": "Kadegaon",
+        "district": "Sangli",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 10.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation"
+      }
+    ],
+    "is_demo": false,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-10-05T16:28:14.927027+00:00",
+    "updated_at": "2026-10-05T16:28:14.927027+00:00"
+  },
   "9876543210": {
     "id": "usr_demo_001",
     "name": "Pranali Patil",
     "email": "pranali.farmer@agriintel.in",
     "mobile": "9876543210",
     "password": "demo_password",
-    "village": "Junnar",
-    "district": "Pune",
+    "village": "pandharpur",
+    "district": "Solapur",
     "state": "Maharashtra",
     "farm_size_acres": 4.5,
     "selected_crops": [
-      "Grapes",
       "Onion",
-      "Sugarcane"
+      "Sugarcane",
+      "Grapes"
     ],
     "language": "en",
     "farming_experience_years": 8,
@@ -30,17 +142,96 @@
         "area_unit": "Acres",
         "soil_type": "Medium Black Clay Loam",
         "irrigation_type": "Drip Irrigation",
-        "created_at": "2026-08-01T10:00:00Z",
-        "updated_at": "2026-09-01T10:00:00Z"
+        "created_at": null,
+        "updated_at": null
       }
     ],
     "is_demo": true,
     "verification_status": "DEMO",
     "created_at": "2026-09-09T09:22:40.834367+00:00",
-    "updated_at": "2026-09-09T09:22:40.834367+00:00"
+    "updated_at": "2026-10-06T04:47:11.571569+00:00"
+  },
+  "7387929005": {
+    "id": "usr_03ec4bf3",
+    "name": "Tejas Nagesh Ghule",
+    "email": "tejasghule114@gmail.com",
+    "mobile": "7387929005",
+    "password": "demo_password",
+    "village": "Ishwarpur",
+    "district": "Sangli",
+    "state": "Maharashtra",
+    "farm_size_acres": 7.0,
+    "selected_crops": [
+      "Sugarcane",
+      "Wheat",
+      "Onion",
+      "Grapes"
+    ],
+    "language": "en",
+    "farming_experience_years": 5,
+    "farms": [
+      {
+        "farm_id": "frm_d21979d8",
+        "user_id": "usr_03ec4bf3",
+        "farm_name": "Tejas Ghule's Farm",
+        "village": "Ishwarpur",
+        "district": "Sangli",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 7.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation",
+        "created_at": null,
+        "updated_at": null
+      }
+    ],
+    "is_demo": true,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-09-09T09:22:40.834367+00:00",
+    "updated_at": "2026-10-06T10:17:26.894677+00:00"
+  },
+  "464846948484": {
+    "id": "usr_0089ca9f",
+    "name": "Abhijit",
+    "email": "tejasghule2395@gmail.com",
+    "mobile": "464846948484",
+    "password": "Abhi@123",
+    "village": "Koregoan",
+    "district": "Satara",
+    "state": "Maharashtra",
+    "farm_size_acres": 5.0,
+    "selected_crops": [
+      "Grapes",
+      "Onion",
+      "Sugarcane"
+    ],
+    "language": "en",
+    "farming_experience_years": 5,
+    "farms": [
+      {
+        "farm_id": "frm_38c07c8c",
+        "user_id": "usr_0089ca9f",
+        "farm_name": "Abhijit's Farm",
+        "village": "Koregoan",
+        "district": "Satara",
+        "state": "Maharashtra",
+        "latitude": 19.9975,
+        "longitude": 73.7898,
+        "area": 5.0,
+        "area_unit": "Acres",
+        "soil_type": "Clay loam",
+        "irrigation_type": "Drip Irrigation"
+      }
+    ],
+    "is_demo": false,
+    "verification_status": "VERIFIED",
+    "created_at": "2026-10-08T10:00:32.858690+00:00",
+    "updated_at": "2026-10-08T10:00:32.858690+00:00"
   },
   "9988776655": {
-    "id": "usr_f0836151",
+    "id": "usr_1f44ec41",
     "name": "Sanjay Deshmukh",
     "email": "sanjay@agriintel.in",
     "mobile": "9988776655",
@@ -57,8 +248,8 @@
     "farming_experience_years": 8,
     "farms": [
       {
-        "farm_id": "frm_9949f3f6",
-        "user_id": "usr_f0836151",
+        "farm_id": "frm_d1741356",
+        "user_id": "usr_1f44ec41",
         "farm_name": "Sanjay Deshmukh's Farm",
         "village": "Ozar",
         "district": "Nashik",
@@ -76,44 +267,6 @@
     "is_demo": false,
     "verification_status": "VERIFIED",
     "created_at": "2026-09-09T09:22:41.290990+00:00",
-    "updated_at": "2026-09-09T09:22:41.369726+00:00"
-  },
-  "7387929005": {
-    "id": "usr_fb7f7014",
-    "name": "Tejas Ghule",
-    "email": "tejasghule23@gmail.com",
-    "mobile": "7387929005",
-    "password": "Tejas@23",
-    "village": "kadegaon",
-    "district": "Sangli",
-    "state": "Maharashtra",
-    "farm_size_acres": 7.0,
-    "selected_crops": [
-      "Onion",
-      "Sugarcane",
-      "Grapes"
-    ],
-    "language": "en",
-    "farming_experience_years": 5,
-    "farms": [
-      {
-        "farm_id": "frm_e9066dff",
-        "user_id": "usr_fb7f7014",
-        "farm_name": "Tejas Ghule's Farm",
-        "village": "kadegaon",
-        "district": "Sangli",
-        "state": "Maharashtra",
-        "latitude": 19.9975,
-        "longitude": 73.7898,
-        "area": 7.0,
-        "area_unit": "Acres",
-        "soil_type": "Clay loam",
-        "irrigation_type": "Drip Irrigation"
-      }
-    ],
-    "is_demo": false,
-    "verification_status": "VERIFIED",
-    "created_at": "2026-09-09T09:22:40.834367+00:00",
-    "updated_at": "2026-09-09T09:26:03.636109+00:00"
+    "updated_at": "2026-10-10T08:44:32.179690+00:00"
   }
 }

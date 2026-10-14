@@ -109,6 +109,15 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> fetchWeatherForDistrict(String district) async {
+    try {
+      _weatherData = await ApiService.getWeather(district);
+      notifyListeners();
+    } catch (e) {
+      debugPrint("Error fetching weather for district $district: $e");
+    }
+  }
+
   Future<void> login(String loginIdentifier, String password) async {
     _setLoading(true);
     try {

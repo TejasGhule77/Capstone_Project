@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agriintel_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEMO_MODE=true
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY:-}
+      - DATABASE_URL=sqlite:////app/data/agriintel.db
+      - OCR_PROVIDER=tesseract
+      - ENABLE_INVENTORY_BLOCKCHAIN=true
+    volumes:
+      - ./data:/app/data
+      - ./backend/uploads:/app/backend/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional production database if upgrading beyond SQLite
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: agriintel_postgres
+  #   restart: always
+  #   environment:
+  #     POSTGRES_DB: agriintel_prod
+  #     POSTGRES_USER: agri_user
+  #     POSTGRES_PASSWORD: strong_password
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   postgres_data:

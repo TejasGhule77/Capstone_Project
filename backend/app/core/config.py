@@ -33,6 +33,14 @@ class Settings(BaseSettings):
     DATA_DEMO_DIR: str = os.path.join(BASE_DIR, "data", "demo")
     MODELS_DIR: str = os.path.join(BASE_DIR, "models")
     
+    # Pesticide Inventory & Comparison Configuration
+    OCR_PROVIDER: str = os.getenv("OCR_PROVIDER", "tesseract")
+    MAX_PESTICIDE_IMAGE_SIZE_MB: int = int(os.getenv("MAX_PESTICIDE_IMAGE_SIZE_MB", "10"))
+    PESTICIDE_UPLOAD_DIR: str = os.path.join(BASE_DIR, "backend", "uploads", "pesticides")
+    ENABLE_INVENTORY_BLOCKCHAIN: bool = os.getenv("ENABLE_INVENTORY_BLOCKCHAIN", "true").lower() == "true"
+    COMPARISON_SCORE_THRESHOLD: float = float(os.getenv("COMPARISON_SCORE_THRESHOLD", "5.0"))
+    SQLALCHEMY_DATABASE_URL: str = os.getenv("DATABASE_URL", f"sqlite:///{os.path.join(BASE_DIR, 'data', 'agriintel.db')}")
+
     class Config:
         env_file = ".env"
         case_sensitive = True

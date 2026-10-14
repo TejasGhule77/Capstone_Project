@@ -62,7 +62,7 @@ Future<PickedLeafImage?> pickImagePlatform({ImageSource source = ImageSource.gal
     });
 
     uploadInput.click();
-    return completer.future;
+    return await completer.future;
   } catch (e) {
     return null;
   }

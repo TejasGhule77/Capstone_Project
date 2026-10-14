@@ -1,7 +1,7 @@
 """
 AgriIntel Prediction Service
-Translates raw model class predictions into rich, verified agricultural pathology profiles.
-Applies low-confidence thresholding and disease risk estimation.
+Translates raw model class predictions and visual feature extractions into rich,
+verified agricultural pathology profiles with canopy severity and risk metrics.
 """
 
 import hashlib
@@ -10,7 +10,7 @@ from typing import Dict, Any, List
 from .inference import inference_engine
 from .preprocessing import preprocessor
 
-CONFIDENCE_THRESHOLD = 0.50
+CONFIDENCE_THRESHOLD = 0.45
 
 DISEASE_KNOWLEDGE_BASE = {
     "Grape___Downy_mildew": {
@@ -22,10 +22,25 @@ DISEASE_KNOWLEDGE_BASE = {
         "severity": "High",
         "disease_risk": "High",
         "symptoms": "Yellow translucent oil-spots on upper leaf surface with dense white cottony sporulation on the underside.",
-        "causes": "High relative humidity (> 80%), prolonged leaf wetness, and ambient temperatures between 20°C and 26°C.",
+        "causes": "High relative humidity (> 80%), prolonged foliar wetness, and temperatures between 20°C and 26°C.",
         "organic_treatment": "Spray 1% neutral Bordeaux mixture or Potassium Phosphonate @ 3.0g/L.",
         "chemical_treatment": "Dimethomorph 50% WP @ 1.0g/L or Metalaxyl-M 4% + Mancozeb 64% WP @ 2.5g/L.",
         "source": "ICAR - National Research Centre for Grapes (NRCG) Pune Annexure-5",
+        "source_url": "https://nrcgrapes.icar.gov.in"
+    },
+    "Grape___Powdery_mildew": {
+        "crop": "Grapes",
+        "disease_name": "Powdery Mildew",
+        "pathogen": "Erysiphe necator (Uncinula necator)",
+        "marathi_name": "भुborderरी / पावडरी मिल्ड्यू",
+        "hindi_name": "चूर्णिल आसिता (पाउडरी फफूंदी)",
+        "severity": "High",
+        "disease_risk": "High",
+        "symptoms": "White to grayish powdery talcum-like coating on upper leaf surface, young shoots, and developing berries causing berry cracking.",
+        "causes": "Warm dry microclimate (25-32°C) accompanied by high atmospheric humidity and dense canopy shade.",
+        "organic_treatment": "Spray Wettable Sulfur 80% WDG @ 2.0-2.5 g/L or Ampelomyces quisqualis bio-fungicide @ 5 g/L.",
+        "chemical_treatment": "Hexaconazole 5% SC @ 1.0 ml/L or Azoxystrobin 18.2% + Difenoconazole 11.4% SC @ 1.0 ml/L.",
+        "source": "ICAR - NRC Grapes Pune Advisory Schedule",
         "source_url": "https://nrcgrapes.icar.gov.in"
     },
     "Grape___Black_rot": {
@@ -118,6 +133,21 @@ DISEASE_KNOWLEDGE_BASE = {
         "source": "ICAR - DOGR Rajgurunagar",
         "source_url": "https://dogr.icar.gov.in"
     },
+    "Onion___Downy_mildew": {
+        "crop": "Onion",
+        "disease_name": "Downy Mildew",
+        "pathogen": "Peronospora destructor",
+        "marathi_name": "कांद्यावरील केवडा",
+        "hindi_name": "प्याज की डाउनी फफूंदी",
+        "severity": "High",
+        "disease_risk": "High",
+        "symptoms": "Pale greenish-yellow oval patches with grayish-violet downy growth on older cylindrical leaves.",
+        "causes": "Cool overcast nights (< 15°C) followed by humid mornings and heavy dew.",
+        "organic_treatment": "Foliar spray of Bordeaux mixture 1% or Trichoderma viride @ 5g/L.",
+        "chemical_treatment": "Metalaxyl-M 4% + Mancozeb 64% WP @ 2.5g/L or Cymoxanil 8% + Mancozeb 64% WP @ 2.0g/L.",
+        "source": "ICAR - DOGR Rajgurunagar",
+        "source_url": "https://dogr.icar.gov.in"
+    },
     "Onion___healthy": {
         "crop": "Onion",
         "disease_name": "Healthy Foliage",
@@ -160,6 +190,21 @@ DISEASE_KNOWLEDGE_BASE = {
         "causes": "Warm dry weather during tillering and transmission of teliospores by wind.",
         "organic_treatment": "Remove and incinerate smut whips inside polyethylene bags. Treat setts with hot water at 52°C for 30 min.",
         "chemical_treatment": "Sett dipping in Propiconazole 25% EC @ 1ml/L.",
+        "source": "ICAR - SBI Coimbatore",
+        "source_url": "https://sugarcane.icar.gov.in"
+    },
+    "Sugarcane___Rust": {
+        "crop": "Sugarcane",
+        "disease_name": "Sugarcane Rust",
+        "pathogen": "Puccinia melanocephala",
+        "marathi_name": "ऊसावरील तांबेरा",
+        "hindi_name": "गन्ने का रतुआ",
+        "severity": "Medium",
+        "disease_risk": "Medium",
+        "symptoms": "Small, elongated yellowish spots on both surfaces turning reddish-brown with powdery pustules.",
+        "causes": "High humidity (> 70%) and temperatures between 20°C and 26°C.",
+        "organic_treatment": "Foliar spray of Pseudomonas fluorescens @ 5g/L.",
+        "chemical_treatment": "Mancozeb 75% WP @ 2.5g/L or Propiconazole 25% EC @ 1ml/L.",
         "source": "ICAR - SBI Coimbatore",
         "source_url": "https://sugarcane.icar.gov.in"
     },
@@ -208,6 +253,21 @@ DISEASE_KNOWLEDGE_BASE = {
         "source": "ICAR - IIWBR Karnal",
         "source_url": "https://iiwbr.icar.gov.in"
     },
+    "Wheat___Leaf_blight": {
+        "crop": "Wheat",
+        "disease_name": "Spot Blight / Leaf Blight",
+        "pathogen": "Bipolaris sorokiniana",
+        "marathi_name": "गव्हावरील करपा",
+        "hindi_name": "गेहूं का पत्ती झुलसा",
+        "severity": "Medium",
+        "disease_risk": "Medium",
+        "symptoms": "Small oval brown lesions with distinct yellow halos expanding into large necrotic patches.",
+        "causes": "Warm humid conditions (25-30°C) during heading and grain filling stages.",
+        "organic_treatment": "Seed treatment and foliar spray of Trichoderma harzianum @ 5g/L.",
+        "chemical_treatment": "Azoxystrobin 18.2% + Difenoconazole 11.4% SC @ 1.0ml/L or Mancozeb 75% WP @ 2.5g/L.",
+        "source": "ICAR - IIWBR Karnal",
+        "source_url": "https://iiwbr.icar.gov.in"
+    },
     "Wheat___healthy": {
         "crop": "Wheat",
         "disease_name": "Healthy Wheat Crop",
@@ -228,7 +288,7 @@ DISEASE_KNOWLEDGE_BASE = {
 class CropDoctorPredictor:
     def predict(self, image_bytes: bytes, filename: str, crop: str = "Grapes") -> Dict[str, Any]:
         """
-        Executes complete validation -> tensor preprocessing -> model inference -> pathology mapping.
+        Executes complete validation -> tensor preprocessing -> vision inference -> pathology mapping.
         """
         # 1. Validation
         is_valid, msg, metrics = preprocessor.validate_image(filename, image_bytes)
@@ -264,8 +324,8 @@ class CropDoctorPredictor:
                 "source": "AgriIntel Vision Engine Low-Confidence Safeguard",
                 "source_url": "https://agriintel.in/safety",
                 "verification_status": "PENDING_REVIEW",
-                "model_id": "CD-RESNET18-V2",
-                "model_version": "v2.1.0",
+                "model_id": "CD-EXPLAINABLE-VISION-V2",
+                "model_version": "v2.2.0",
                 "blockchain_hash": hashlib.sha256(f"UNCERTAIN:{crop}:{time.time()}".encode("utf-8")).hexdigest(),
                 "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
             }
@@ -286,6 +346,26 @@ class CropDoctorPredictor:
             else:
                 profile = DISEASE_KNOWLEDGE_BASE["Wheat___Yellow_stripe_rust"]
 
+        # Calculate dynamic severity based on visual symptoms
+        features = top_pred.get("features", {})
+        necrosis = features.get("necrosis_pct", 0)
+        chlorosis = features.get("chlorosis_pct", 0)
+        sporulation = features.get("sporulation_pct", 0)
+        total_symptom_pct = necrosis + (chlorosis * 0.5) + sporulation
+
+        if "healthy" in cls_name.lower():
+            severity_str = "Low"
+            disease_risk_str = "Low"
+        elif total_symptom_pct > 35.0:
+            severity_str = "High"
+            disease_risk_str = "High"
+        elif total_symptom_pct > 15.0:
+            severity_str = "Medium"
+            disease_risk_str = "Medium"
+        else:
+            severity_str = profile.get("severity", "Medium")
+            disease_risk_str = profile.get("disease_risk", "Medium")
+
         diagnosis_id = f"diag_{hashlib.md5(image_bytes).hexdigest()[:8]}"
         timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         b_hash = hashlib.sha256(f"{diagnosis_id}:{crop}:{profile['disease_name']}:{confidence}:{timestamp}".encode("utf-8")).hexdigest()
@@ -300,19 +380,19 @@ class CropDoctorPredictor:
             "marathi_name": profile["marathi_name"],
             "hindi_name": profile.get("hindi_name"),
             "confidence": confidence,
-            "severity": profile["severity"],
-            "disease_risk": profile["disease_risk"],
+            "severity": severity_str,
+            "disease_risk": disease_risk_str,
             "symptoms": profile["symptoms"],
-            "causes": profile.get("causes", "Favorable microclimate and spore transmission."),
-            "weather_risk": f"Active {profile['disease_risk']} disease risk condition.",
+            "causes": profile.get("causes", "Favorable microclimate and foliar spore germination."),
+            "weather_risk": f"Active {disease_risk_str} agromet disease risk condition.",
             "recommendation": f"Consult verified advisory and execute {profile['organic_treatment']} or {profile['chemical_treatment']}.",
             "organic_treatment": profile["organic_treatment"],
             "chemical_treatment": profile["chemical_treatment"],
             "source": profile["source"],
             "source_url": profile["source_url"],
             "verification_status": "VERIFIED",
-            "model_id": "CD-RESNET18-V2",
-            "model_version": "v2.1.0",
+            "model_id": "CD-EXPLAINABLE-VISION-V2",
+            "model_version": "v2.2.0",
             "top_candidates": inference_results,
             "blockchain_hash": b_hash,
             "timestamp": timestamp

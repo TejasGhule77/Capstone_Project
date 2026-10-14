@@ -10,7 +10,7 @@ from typing import Dict, Any, Tuple
 import numpy as np
 from PIL import Image
 
-ALLOWED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+ALLOWED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
 MAX_FILE_SIZE_BYTES = 15 * 1024 * 1024  # 15 MB
 TARGET_IMAGE_SIZE = (224, 224)
 

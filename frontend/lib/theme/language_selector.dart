@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
+import 'app_theme.dart';
 
 class LanguageSelectorButton extends StatelessWidget {
   final bool isDark;
@@ -13,13 +14,13 @@ class LanguageSelectorButton extends StatelessWidget {
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
       decoration: BoxDecoration(
-        color: isDark ? Colors.grey.shade200 : Colors.white.withValues(alpha: 0.2),
+        color: isDark ? AppColors.deepSectionDark.withValues(alpha: 0.12) : AppColors.cardCream.withValues(alpha: 0.25),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: isDark ? Colors.grey.shade400 : Colors.white38,
-          width: 1,
+          color: isDark ? AppColors.border : AppColors.parchment.withValues(alpha: 0.5),
+          width: 1.2,
         ),
       ),
       child: DropdownButtonHideUnderline(
@@ -28,26 +29,26 @@ class LanguageSelectorButton extends StatelessWidget {
           icon: Icon(
             Icons.translate_rounded,
             size: 16,
-            color: isDark ? Colors.black87 : Colors.white,
+            color: isDark ? AppColors.primaryForest : AppColors.parchment,
           ),
-          dropdownColor: Colors.white,
+          dropdownColor: AppColors.cardCream,
           style: TextStyle(
-            fontSize: 12,
+            fontSize: 12.5,
             fontWeight: FontWeight.bold,
-            color: isDark ? Colors.black87 : Colors.white,
+            color: isDark ? AppColors.primaryForest : AppColors.parchment,
           ),
           items: const [
             DropdownMenuItem(
               value: "mr",
-              child: Text("मराठी", style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold)),
+              child: Text("मराठी", style: TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.bold)),
             ),
             DropdownMenuItem(
               value: "hi",
-              child: Text("हिंदी", style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold)),
+              child: Text("हिंदी", style: TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.bold)),
             ),
             DropdownMenuItem(
               value: "en",
-              child: Text("English", style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold)),
+              child: Text("English", style: TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.bold)),
             ),
           ],
           onChanged: (val) {

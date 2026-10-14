@@ -1,7 +1,10 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_state.dart';
 import '../theme/app_theme.dart';
+import '../widgets/agriintel_logo.dart';
+import '../widgets/organic_decorations.dart';
 import 'home_screen.dart';
 import 'login_screen.dart';
 
@@ -12,25 +15,45 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
-  late AnimationController _animController;
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+  late AnimationController _mainAnimController;
+  late Animation<double> _scaleAnimation;
   late Animation<double> _fadeAnimation;
+  late AnimationController _fernSwayController;
+  late AnimationController _progressController;
 
   @override
   void initState() {
     super.initState();
-    _animController = AnimationController(
+    _mainAnimController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1400),
     );
-    _fadeAnimation = CurvedAnimation(parent: _animController, curve: Curves.easeInOut);
-    _animController.forward();
+    _scaleAnimation = CurvedAnimation(
+      parent: _mainAnimController,
+      curve: Curves.easeOutBack,
+    );
+    _fadeAnimation = CurvedAnimation(
+      parent: _mainAnimController,
+      curve: Curves.easeInOut,
+    );
 
+    _fernSwayController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 3200),
+    )..repeat(reverse: true);
+
+    _progressController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2200),
+    )..forward();
+
+    _mainAnimController.forward();
     _navigateNext();
   }
 
   void _navigateNext() async {
-    await Future.delayed(const Duration(milliseconds: 2000));
+    await Future.delayed(const Duration(milliseconds: 2400));
     if (!mounted) return;
 
     final appState = Provider.of<AppState>(context, listen: false);
@@ -49,92 +72,190 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   void dispose() {
-    _animController.dispose();
+    _mainAnimController.dispose();
+    _fernSwayController.dispose();
+    _progressController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.primaryGreen,
-      body: Center(
-        child: FadeTransition(
-          opacity: _fadeAnimation,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.2),
-                      blurRadius: 16,
-                      offset: const Offset(0, 6),
-                    )
-                  ],
-                ),
-                child: const Icon(
-                  Icons.eco_rounded,
-                  size: 56,
-                  color: AppTheme.primaryGreen,
-                ),
-              ),
-              const SizedBox(height: 24),
-              const Text(
-                "AgriIntel",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 34,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
-                ),
-              ),
-              const SizedBox(height: 8),
-              const Text(
-                "AI Precision Crop Decision Engine",
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(height: 32),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white30),
-                ),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.verified_outlined, color: Colors.white, size: 16),
-                    SizedBox(width: 6),
-                    Text(
-                      "VERIFICATION STATUS: DEMO",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0.8,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 48),
-              const CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                strokeWidth: 2.5,
-              ),
-            ],
+      backgroundColor: AppColors.parchment,
+      body: Stack(
+        children: [
+          // Background Sun-disc radial glow
+          const Positioned.fill(
+            child: SunDiscGlow(
+              radius: 260,
+              glowColor: AppColors.diwaliGold,
+            ),
           ),
-        ),
+
+          // Swaying Botanical Ferns in corners
+          AnimatedBuilder(
+            animation: _fernSwayController,
+            builder: (context, child) {
+              final angle = math.sin(_fernSwayController.value * math.pi * 2) * 0.05;
+              return Stack(
+                children: [
+                  Transform.rotate(
+                    angle: angle,
+                    alignment: Alignment.topLeft,
+                    child: const BotanicalFernCorner(
+                      alignment: Alignment.topLeft,
+                      size: 220,
+                      opacity: 0.16,
+                      color: AppColors.primaryForest,
+                    ),
+                  ),
+                  Transform.rotate(
+                    angle: -angle,
+                    alignment: Alignment.bottomRight,
+                    child: const BotanicalFernCorner(
+                      alignment: Alignment.bottomRight,
+                      size: 240,
+                      opacity: 0.16,
+                      color: AppColors.fernGreen,
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
+
+          SafeArea(
+            child: Center(
+              child: FadeTransition(
+                opacity: _fadeAnimation,
+                child: ScaleTransition(
+                  scale: _scaleAnimation,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Circular Progress Ring enclosing AgriIntel Logo
+                      AnimatedBuilder(
+                        animation: _progressController,
+                        builder: (context, child) {
+                          return Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              // Outer ambient glow ring
+                              Container(
+                                width: 148,
+                                height: 148,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AppColors.cardCream,
+                                  boxShadow: AppShadows.elevated,
+                                  border: Border.all(color: AppColors.border, width: 1.5),
+                                ),
+                              ),
+                              // Circular Progress Track
+                              SizedBox(
+                                width: 140,
+                                height: 140,
+                                child: CircularProgressIndicator(
+                                  value: _progressController.value,
+                                  strokeWidth: 3.5,
+                                  backgroundColor: AppColors.sageBg,
+                                  valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primaryForest),
+                                  strokeCap: StrokeCap.round,
+                                ),
+                              ),
+                              // Centered Official Logo
+                              const AgriIntelLogo(
+                                size: 92,
+                              ),
+                            ],
+                          );
+                        },
+                      ),
+
+                      const SizedBox(height: 28),
+
+                      // Brand Heading
+                      Text(
+                        "AgriIntel",
+                        style: AppTextStyles.serifTitle(
+                          fontSize: 34,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.primaryForest,
+                          letterSpacing: -0.5,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+
+                      // Subtitle
+                      Text(
+                        "Precision Agriculture AI Decision Engine",
+                        style: AppTextStyles.body(
+                          fontSize: 14,
+                          color: AppColors.textSecondary,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+
+                      const SizedBox(height: 28),
+
+                      // Progress Indicator with percentage
+                      AnimatedBuilder(
+                        animation: _progressController,
+                        builder: (context, child) {
+                          final pct = (_progressController.value * 100).toInt();
+                          return Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                            decoration: BoxDecoration(
+                              color: AppColors.cardCream,
+                              borderRadius: BorderRadius.circular(24),
+                              border: Border.all(color: AppColors.border),
+                              boxShadow: AppShadows.card,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(
+                                  Icons.eco_rounded,
+                                  color: AppColors.fernGreen,
+                                  size: 16,
+                                ),
+                                const SizedBox(width: 8),
+                                Text(
+                                  "Cultivating Smarter Farms… $pct%",
+                                  style: AppTextStyles.eyebrow(color: AppColors.primaryForest).copyWith(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: 0.8,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          // Bottom Tagline
+          Positioned(
+            bottom: 24,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Text(
+                "Smarter Farming • Healthier Tomorrow",
+                style: AppTextStyles.eyebrow(color: AppColors.textSecondary).copyWith(
+                  fontSize: 11,
+                  letterSpacing: 1.5,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
